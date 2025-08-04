@@ -1,4 +1,4 @@
-## vim0-debugwin
+## vim9-debugwin
 
 Are you tired debugging your vim9script with `echom`? Use this small plugin:
 ```
