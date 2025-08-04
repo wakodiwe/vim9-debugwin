@@ -1,15 +1,15 @@
 vim9script
-# {{{ Plugin: vim9-debugwin - autoload/debugwin.vim
+# Plugin: vim9-debugwin - autoload/debugwin.vim
 # Repository:  https://github.com/wakodiwe/vim9-debugwin
 # Maintainer: Wako Diwe <wakodiwe@gmail.com>
-# Last Update: 2025-08-04 # }}}
+# Last Update: 2025-08-04
 
-def Open() # {{{
+def Open() # 
     :5new [DEBUGWIN]
     call Setoptions()
-enddef # }}}
+enddef
 
-def Setoptions() # {{{
+def Setoptions() # 
     setlocal bufhidden=wipe
     setlocal buftype=nofile
     setlocal nobuflisted
@@ -17,17 +17,17 @@ def Setoptions() # {{{
     setlocal nocursorline
     setlocal nolist
     setlocal noswapfile
-enddef # }}}
+enddef
 
-def Write(text: any) # {{{
+def Write(text: any) # 
     setlocal modifiable
     # :silent :0put =text
     :silent :0put =text
     :silent :+1d
     setlocal nomodifiable
-enddef # }}}
+enddef
 
-export def DebugWin(text: string) # {{{
+export def DebugWin(text: string) # 
     var last_bufnr = bufnr()
 
     if bufnr('[DEBUGWIN]') == -1
@@ -38,4 +38,4 @@ export def DebugWin(text: string) # {{{
 
     call Write(text)
     call win_gotoid(win_findbuf(bufnr(last_bufnr))[0])
-enddef # }}}
+enddef
