@@ -5,7 +5,7 @@ vim9script
 # Last Update: 2025-08-04
 
 def Open() # 
-    :5new [DEBUGWIN]
+    :silent :5new [DEBUGWIN]
     call Setoptions()
 enddef
 
