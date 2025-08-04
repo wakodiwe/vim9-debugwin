@@ -1,0 +1,35 @@
+vin9-debugwin.txt*  Debugging
+Author: Wako Diwe <wakodiwe@gmail.com>
+License: Same terms as Vim itself (see |license|)
+
+"This plugin is only available if 'compatible' is not set." - T. Pope
+
+INTRODUCTION                                                        *debugwin*
+
+Simple plugin presenting a debug window when you need one.
+
+COMMANDS                                                   *debugwin-commands*
+
+:DebugWin text          Use the long                      *debugwin-:DebugWin* 
+:D text                 Or the short command                     *debugwin-:D* 
+
+USAGE                                                         *debugwin-usage*
+
+Simply use :D 'some text' or :DebugWin 'some text' in the command line.
+Or use it in your script:
+>
+        var g:superimportantvar = 'notsoimportant'
+        DebugWin 'g:superimportantvar'
+<
+Or like this:
+>
+        var g:superimportantvar = 'notsoimportant'
+        D 'g:superimportantvar'
+<
+ABOUT                                                         *debugwin-about*
+
+Nothing to see here...
+
+http://github.com/wakodiwe/vim9-debugwin
+
+vim:tw=78:et:ft=help:norl:
