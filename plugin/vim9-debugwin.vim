@@ -13,4 +13,5 @@ g:loaded_vim9debugwin = true
 
 import autoload 'debugwin.vim'
 
+command! -nargs=1 DebugWin debugwin.DebugWin(<args>)
 command! -nargs=1 D debugwin.DebugWin(<args>)
